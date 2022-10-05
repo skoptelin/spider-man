@@ -364,6 +364,54 @@ h1 {
     background-color: #004C93;
 }
 
+.resultBox {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    height: fit-content;   
+}
+
+.resultText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttonResultBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.buttonResultBox > button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    background: #0288d1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    cursor: pointer;
+}
+
+.buttonResultBox > button:hover {
+    background-color: blue;
+}
+
 /* My difficult */
 
 .myDifficultBox {
@@ -525,10 +573,32 @@ h1 {
         margin: auto;
     }
 
+    .header {
+        height: auto;
+    }
+
+    .navList {
+        display: block;
+    }
+
+    .navItem {
+        margin-bottom: 20px;
+    }
+
+    #aboutMe, #myActivity, #calculator, #difficult, #mood { 
+        padding-top: 250px;
+        margin-top: -250px;
+        -webkit-background-clip: content-box;
+        background-clip: content-box;
+    }
+
     .headerTextName {
         margin: 15px;
         margin-left: 0;
+    }
 
+    .aboutMeBox {
+        padding-top: 150px;
     }
 
     .myActivityList {
