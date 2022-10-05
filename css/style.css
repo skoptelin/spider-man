@@ -1,0 +1,571 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.container {
+    max-width: 1108px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.section {
+    width: 1440px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chapterText {
+    padding-top: 30px;
+    margin-bottom: 0;
+   
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #004C93;
+}
+
+/* Header */
+
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navList {
+    display: flex;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 26px;
+}
+
+.header {
+    height: 100px;
+    width: 1440px;
+
+    background: #004C93;
+    
+    position: fixed;
+    z-index: 100;
+}
+
+a:link {
+    text-decoration: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.headerTextName {
+    margin-right: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+    /*border: 1px solid #000000;*/
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a:visited, a:focus, a:hover, a:active {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700; 
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+}
+
+#aboutMe, #myActivity, #calculator, #difficult, #mood { 
+    padding-top: 120px;
+    margin-top: -120px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+}
+
+/* About Me */
+
+.aboutMeBox {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 60px;
+}
+
+.aboutMeInfo {
+    padding-top: 200px;
+    width: 515px;
+    padding-right: 30px;
+}
+
+.imgBox {
+    padding-top: 150px;
+}
+
+h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #004C93;
+
+    padding-bottom: 45px;
+    margin-bottom: 0;
+}
+
+.aboutMeText {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #004C93;
+
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 45px;
+}
+
+/* My Activity */
+
+.myActivityBox {
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    background: #F3FBFF;
+}
+
+.myActivityInfo {
+    display: flex;
+    margin-top: 30px;
+}
+
+.myActivityList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myActivityItemTop {
+    margin-right: 25px;
+    width: 200px;
+    max-height: 265px;
+
+    border: 1px solid #004C93;
+    border-radius: 4px;
+}
+
+.myActivityItemBottom {
+    margin-top: 150px;
+    margin-right: 25px;
+    width: 200px;
+    max-height: 265px;
+
+    border: 1px solid #004C93;
+    border-radius: 4px;
+}
+
+.myActivityBoxText1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 160%;
+    
+    color: #004C93;
+
+    margin: 0;
+    margin-left: 12px;
+}
+
+.myActivityBoxText2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+
+    color: #2E4674;
+
+    margin: 0;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+/* Calculator */
+
+.calcBox {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.calcInfo {
+    display: flex;
+}
+
+.calcAction {
+    margin-right: 130px;
+    max-width: 555px;
+}
+
+.textCalc {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+
+    color: #000000;
+
+    padding-top: 30px;
+}
+
+.enterBox {
+    width: 555px;
+    height: 32px;
+
+    border: 1px solid #000000;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.enterBoxWithButton {
+    width: 523px;
+    height: 32px;
+
+    border: 1px solid #000000;
+    border-right: 0;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.buttonBox {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+
+    color: #FFFFFF;
+
+    width: 168px;
+    height: 50px;
+
+    background: #004C93;
+    border-radius: 5px;
+    border-color: #004C93;
+
+    margin-top: 40px;
+}
+
+.boxWithButton {
+    display: flex;
+}
+
+.calcDropDownBox {
+    display: inline-block;
+
+    height: 32px;
+    width: 32px;
+
+    border: 1px solid #000000;
+
+    margin-top: 5px;
+}
+
+.calcDropDownButton {
+    display: flex;
+    align-items: center;
+
+    height: 32px;
+    width: 32px;
+
+    border: 1px;
+    padding: 0;
+
+    background-color: #FFFFFF;
+}
+
+.lineBox2 {
+    width: 14.56px;
+    height: 0px;
+
+    margin-right: -3px;
+
+    border: 0.5px solid #000000;
+    transform: rotate(45deg);
+}
+
+.lineBox3 {
+    width: 14.56px;
+    height: 0px;
+
+    margin-left: -3px;
+
+    border: 0.5px solid #000000;
+    transform: rotate(-45deg);
+}
+
+.mathItemList {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.mathItem {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.mathItem:hover {
+    background-color: #ddd
+}
+
+.calcDropDownBox:hover .mathItemList {
+    display: block;
+}
+
+.calcDropDownButton:hover, .mathItemList:hover .calcDropDownButton {
+    background-color: #004C93;
+}
+
+/* My difficult */
+
+.myDifficultBox {
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    background: #F3FBFF;
+}
+
+.myDifficultInfo {
+    display: flex;
+    margin-top: 30px;
+}
+
+.myDifficultList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myDifficultItemTop {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    margin-right: 25px;
+    width: 200px;
+    max-height: 265px;
+
+    border: 1px solid #004C93;
+    border-radius: 4px;
+}
+
+.myDifficultItemBottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    margin-top: 150px;
+    margin-right: 25px;
+    width: 200px;
+    max-height: 265px;
+    
+    border: 1px solid #004C93;
+    border-radius: 4px;
+}
+
+.myDifficultBoxText1 {
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 100%;
+    
+    color: #004C93;
+
+    margin: 0;
+    max-height: 120px;
+    max-width: 55px;
+}
+
+.myDifficultBoxText2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+
+    color: #2E4674;
+
+    margin: 0;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+/* My mood */
+
+.myMoodBox {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.smileImg {
+    max-height: 600px;
+    max-width: 600px;
+
+    margin-top: 10px;
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/* Footer */
+
+.footer {
+    width: 1440px;
+    height: 100px;
+    background-color: #004C93;
+}
+
+.footerBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footerContacts {
+    display: flex;
+    align-items: center;
+}
+
+.footerTelNumber {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+    margin-right: 30px;
+}
+
+/* Адаптация */
+
+@media (max-width: 1273px) {
+
+    .aboutMeBox {
+        display: block;
+    }
+    
+    .imgBox {
+        padding-top: 15px;
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    .myActivityList {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .myDifficultList {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .headerBox {
+        display: block;
+        margin: auto;
+    }
+
+    .headerTextName {
+        margin: 15px;
+        margin-left: 0;
+
+    }
+
+    .myActivityList {
+        flex-direction: column;
+    }
+
+    .myActivityItemBottom {
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .myActivityItemTop {
+        margin-bottom: 20px;
+    }
+
+    .calcInfo {
+        display: block;
+    }
+
+    .myDifficultList {
+        flex-direction: column;
+    }
+
+    .myDifficultItemBottom {
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .myDifficultItemTop {
+        margin-bottom: 20px;
+    }
+
+    .smileImg {
+        margin-left: 15px;
+    }
+
+    .footerBox {
+        display: block;
+    }
+}

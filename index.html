@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Обо мне</title>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header class="header">
+            <div class = "container headerBox">
+            
+                <div class="headerTextName">Стас Коптелин</div>
+
+                <nav>
+                    <ul class="navList">
+                        <li class = "navItem">
+                            <a href="#aboutMe">Обо мне</a>
+                        </li>
+                        <li class = "navItem">
+                            <a href="#myActivity">Моя деятельность</a> 
+                        </li>
+                        <li class = "navItem">
+                            <a href="#calculator">Калькулятор</a> 
+                        </li>
+                        <li class = "navItem">
+                            <a href="#difficult">Сложности</a> 
+                        </li>
+                        <li class = "navItem">
+                            <a href="#mood">Настроение</a> 
+                        </li>
+                        <li class = "navItem">
+                            <a href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            
+            </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container aboutMeBox">
+                <div class="aboutMeInfo">
+                    <h1 id="aboutMe">Меня зовут Стас!</h1>
+                    <p class="aboutMeText">И я хочу обучиться программированию, потому что мне это жутко интересно!</p>
+                    <p class="aboutMeText">А еще я люблю рыбалку, горы и Dota2.</p>
+                </div>
+                <div class="imgBox">
+                    <img src="/img/5AT96912-o4.jpg" alt="Фото Стас Коптелин">
+                </div>
+            </div>
+        </section>
+
+        <section class="section myActivityBox">
+            <div class="container">
+
+                <p class="chapterText" id="myActivity">Моя деятельность</p>
+
+                <div class="myActivityInfo">
+                    <ul class="myActivityList">
+                        <li class="myActivityItemTop">
+                            <p class="myActivityBoxText1">1</p>
+                            <p class="myActivityBoxText2">Ранее работал проект-менеджером</p>
+                        </li>
+                        <li class="myActivityItemBottom">
+                            <p class="myActivityBoxText1">2</p>
+                            <p class="myActivityBoxText2">Еще раньше продавал сыр</p>
+                        </li>
+                        <li class="myActivityItemTop">
+                            <p class="myActivityBoxText1">3</p>
+                            <p class="myActivityBoxText2">Сейчас активно обучаюсь программированию</p>
+                        </li>
+                        <li class="myActivityItemBottom">
+                            <p class="myActivityBoxText1">4</p>
+                            <p class="myActivityBoxText2">И путешествую с близкими и друзьями</p>
+                        </li>
+                        <li class="myActivityItemTop">
+                            <p class="myActivityBoxText1">5</p>
+                            <p class="myActivityBoxText2">Люблю рыбачить. Иногда получается:)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section calcBox">
+            <div class="container">
+                <p class="chapterText" id="calculator">Калькулятор</p>
+                <div class="calcInfo">
+                    <div class="calcAction">
+                        <div class="textCalc">Введите первое число:</div>
+                        <input class="enterBox">
+                        <div class="textCalc">Выберите операцию:</div>
+                        <div class="boxWithButton"> 
+                                <div>
+                                    <input class="enterBoxWithButton">
+                                </div>
+                                <div class="calcDropDownBox">
+                                    <button class="calcDropDownButton">
+                                        <hr class="lineBox2">
+                                        <hr class="lineBox3">
+                                    </button>
+                                    <ul class="mathItemList">
+                                        <li class="mathItem">
+                                            +
+                                        </li>
+                                        <li class="mathItem">
+                                            -
+                                        </li>
+                                        <li class="mathItem">
+                                            *
+                                        </li>
+                                        <li class="mathItem">
+                                            /
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="textCalc">Введите второе число:</div>
+                        <input class="enterBox">
+                        <button class="buttonBox">Вычислить</button>
+                    </div>
+                    <div class="calcResult">
+                        <div class="textCalc">Ваш результат:</div>
+                        <div class="textCalc">Расчет не производился</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section myDifficultBox">
+            <div class="container">
+                <p class="chapterText" id="difficult">Сложности</p>
+                <div class="myDifficultInfo">
+                    <ul class="myDifficultList">
+                        <li class="myDifficultItemTop">
+                            <p class="myDifficultBoxText1">?</p>
+                            <p class="myDifficultBoxText2">Не получилось сделать окантовку текста имени в хедере</p>
+                        </li>
+                        <li class="myDifficultItemBottom">
+                            <p class="myDifficultBoxText1">?</p>
+                            <p class="myDifficultBoxText2">Не вставали правильно линии на кнопке выбора операции в калькуляторе</p>
+                        </li>
+                        <li class="myDifficultItemTop">
+                            <p class="myDifficultBoxText1">?</p>
+                            <p class="myDifficultBoxText2">Хедер перекрывал контент при переходе через якорные ссылки</p>
+                        </li>
+                        <li class="myDifficultItemBottom">
+                            <p class="myDifficultBoxText1">?</p>
+                            <p class="myDifficultBoxText2">Не понял когда у элемента определяется отступ от контейнера в котором он находится и когда от верхнего края страницы</p>
+                        </li>
+                        <li class="myDifficultItemTop">
+                            <p class="myDifficultBoxText1">?</p>
+                            <p class="myDifficultBoxText2">Переделал верстку через флексы, изначально сделал через position=absolute</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section myMoodBox">
+            <div class="container">
+                <p class="chapterText" id="mood">Настроение</p>
+                <img src="/img/pngwing.com.png" alt="Настроение" class="smileImg">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footerBox" id="contacts">
+            <div class="headerTextName">Стас Коптелин</div>
+            <div class="footerContacts">
+                <div class="footerTelNumber">+7 987 717 8412</div>
+                <div><a href="https://vk.com/koptelin"><img src="/img/Vector.png" alt="Иконка ВК" class="footerIcon"></a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
