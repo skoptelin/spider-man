@@ -2,6 +2,10 @@
     box-sizing: border-box;
 } */
 
+/* body {
+    width: max-content;
+} */
+
 .container {
     max-width: 1108px;
     margin-left: auto;
@@ -12,7 +16,7 @@
 }
 
 .section {
-    width: 1440px;
+    width: auto;
 }
 
 ul {
@@ -53,7 +57,7 @@ ul {
 
 .header {
     height: 100px;
-    width: 1440px;
+    width: 100%;
 
     background: #004C93;
     
@@ -153,6 +157,8 @@ h1 {
 /* My Activity */
 
 .myActivityBox {
+    width: 100%;
+
     padding-top: 25px;
     padding-bottom: 40px;
 
@@ -511,7 +517,7 @@ h1 {
 /* Footer */
 
 .footer {
-    width: 1440px;
+    width: 100%;
     height: 100px;
     background-color: #004C93;
 }
@@ -552,6 +558,13 @@ h1 {
         padding-top: 15px;
     }
     
+    main {
+        width: 145%;
+    }
+    
+    .footer {
+        width: 145%;
+    }
     
 }
 
@@ -565,9 +578,18 @@ h1 {
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    main {
+        width: 115%;
+    }
+    
+    .footer {
+        width: 115%;
+    }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 390px) {
+
     .headerBox {
         display: block;
         margin: auto;
@@ -606,12 +628,18 @@ h1 {
     }
 
     .myActivityItemBottom {
+        display: flex;
+        align-items: center;
         margin-bottom: 20px;
         margin-top: 0;
+        width: 565px;
     }
 
     .myActivityItemTop {
+        display: flex;
+        align-items: center;
         margin-bottom: 20px;
+        width: 565px;
     }
 
     .calcInfo {
@@ -622,13 +650,27 @@ h1 {
         flex-direction: column;
     }
 
+    .myDifficultBoxText1 {
+        margin-left: 30px;
+    }
+
+    .myDifficultBoxText2 {
+        margin-left: 30px;
+    }
+
     .myDifficultItemBottom {
+        flex-wrap: nowrap;
+        align-items: center;
         margin-bottom: 20px;
         margin-top: 0;
+        width: 565px;
     }
 
     .myDifficultItemTop {
+        flex-wrap: nowrap;
+        align-items: center;
         margin-bottom: 20px;
+        width: 565px;
     }
 
     .smileImg {
@@ -637,5 +679,13 @@ h1 {
 
     .footerBox {
         display: block;
+    }
+
+    main {
+        width: 155%;
+    }
+    
+    .footer {
+        width: 155%;
     }
 }
