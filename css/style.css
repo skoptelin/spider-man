@@ -249,7 +249,7 @@ h1 {
     padding-top: 30px;
 }
 
-.enterBox {
+.enterBox1 {
     width: 555px;
     height: 32px;
 
@@ -259,21 +259,35 @@ h1 {
     margin-bottom: 0;
     margin-left: 0;
     margin-left: 0;
-    padding: 0;
+    padding: 2px;
 }
 
-.enterBoxWithButton {
-    width: 523px;
+.enterBox2 {
+    width: 555px;
     height: 32px;
 
     border: 1px solid #000000;
-    border-right: 0;
 
     margin-top: 5px;
     margin-bottom: 0;
     margin-left: 0;
     margin-left: 0;
-    padding: 0;
+    padding: 2px;
+}
+
+.enterBoxWithButton {
+    width: 560px;
+    height: 36px;
+
+    border: 1px solid #000000;
+    /* border-right: 0; */
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 2px;
+    vertical-align: middle;
 }
 
 .buttonBox {
@@ -290,20 +304,22 @@ h1 {
 
     background: #004C93;
     border-radius: 5px;
-    border-color: #004C93;
+    border: none;
 
     margin-top: 40px;
+
+    cursor: pointer;
 }
 
-.boxWithButton {
-    display: flex;
+.buttonBox:hover {
+    background-color: blue;
 }
 
 .calcDropDownBox {
     display: inline-block;
 
-    height: 32px;
-    width: 32px;
+    height: 36px;
+    width: 36px;
 
     border: 1px solid #000000;
 
@@ -314,8 +330,8 @@ h1 {
     display: flex;
     align-items: center;
 
-    height: 32px;
-    width: 32px;
+    height: 36px;
+    width: 36px;
 
     border: 1px;
     padding: 0;
@@ -404,7 +420,7 @@ h1 {
     border: none;
     border-radius: 5px;
 
-    background: #0288d1;
+    background: #004C93;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -416,6 +432,10 @@ h1 {
 
 .buttonResultBox > button:hover {
     background-color: blue;
+}
+
+.hiddenResultBox {
+    display: none;
 }
 
 /* My difficult */
