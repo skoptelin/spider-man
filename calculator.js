@@ -14,42 +14,35 @@ function calculate() {
     let secondConvertNumber = Number(secondNumber);
 
     if(operation === "+") {
-        result = firstConvertNumber + secondConvertNumber;
+        result = (firstConvertNumber + secondConvertNumber).toFixed(2);
 
         return result;
     }
     if(operation === "-") {
-        result = firstConvertNumber - secondConvertNumber;
+        result = (firstConvertNumber - secondConvertNumber).toFixed(2);
 
         return result;
     }
     if(operation === "*") {
-        result = firstConvertNumber * secondConvertNumber;
+        result = (firstConvertNumber * secondConvertNumber).toFixed(2);
 
         return result;
     }
     if(operation === "/") {
-        result = firstConvertNumber / secondConvertNumber;
-
+        result = (firstConvertNumber / secondConvertNumber).toFixed(2);
         return result;
     }
 }
 
-//Забираем знак операции
-function getOperationItem() {
-    let elementInput = document.getElementById("operation");
-    operation = elementInput.value;
-
-    return operation;
-}
-
 //Вывод алерта с результатом калькулятора
 function showResult() {
-    calculate(firstNumber, secondNumber, operation);
-    let elementWindow = document.querySelector(".resultBox");
-    elementWindow.classList.remove("hiddenResultBox");
-    document.querySelector(".resultText").innerHTML = result;
-    document.getElementById("resultText").innerHTML = result;
+    if ((document.getElementById("enterBox1").value !== "") && (document.getElementById("operation").value !== "") && (document.getElementById("enterBox2").value !== "")) { //Проверка, чтобы поля ввода не были пустыми
+        calculate(firstNumber, secondNumber, operation);
+        let elementWindow = document.querySelector(".resultBox");
+        elementWindow.classList.remove("hiddenResultBox");
+        document.querySelector(".resultText").innerHTML = result;
+        document.getElementById("resultText").innerHTML = result;
+    }
 }
 
 //Скрытие алерта
@@ -62,17 +55,20 @@ function hide() {
 function getNumber1() {
     let elementInput = document.querySelector(".enterBox1");
     firstNumber = elementInput.value;
-
-    console.log(firstNumber);
     return firstNumber;
+}
+
+//Забираем знак операции
+function getOperationItem() {
+    let elementInput = document.getElementById("operation");
+    operation = elementInput.value;
+    return operation;
 }
 
 //Забираем второе число
 function getNumber2() {
     let elementInput = document.querySelector(".enterBox2");
     secondNumber = elementInput.value;
-
-    console.log(secondNumber);
     return secondNumber;
 }
 

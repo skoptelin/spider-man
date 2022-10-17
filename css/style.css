@@ -262,6 +262,10 @@ h1 {
     padding: 2px;
 }
 
+/* .enterBox1:invalid {
+    border: 2px solid red;
+  } */
+
 .enterBox2 {
     width: 555px;
     height: 32px;
@@ -274,6 +278,10 @@ h1 {
     margin-left: 0;
     padding: 2px;
 }
+
+/* .enterBox2:invalid {
+    border: 2px solid red;
+  } */
 
 .enterBoxWithButton {
     width: 560px;

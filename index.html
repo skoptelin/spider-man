@@ -113,78 +113,33 @@
                         </div>
                     </div>
                     <div class="calcAction">
-                        <div class="textCalc">Введите первое число:</div>
-                        <input required="Пожалуйста, введите число" class="enterBox1"> 
-                        <div class="textCalc">Выберите операцию:</div>
                         <form>
-                            <select onchange="getOperationItem()"class="enterBoxWithButton" id="operation">
-                                <option class="mathItem">
-                                    
-                                </option>
-                                <option value="+" class="mathItem">
-                                    + Сложить
-                                </option>
-                                <option value="-" class="mathItem">
-                                    - Вычесть
-                                </option>
-                                <option value="*" class="mathItem">
-                                    * Умножить
-                                </option>
-                                <option value="/" class="mathItem">
-                                    / Разделить
-                                </option> 
-                            </select>
-
-
-                            <!-- <div class="enterBoxWithButton">
-                            </div>
-                            <form action="" class="calcDropDownBox">
-                                <div class="calcDropDownButton">
-                                    <select onchange="getOperationItem()"class="mathItemList" id="operation">
-                                    
-                                        <option class="mathItem">
-                                            
-                                        </option>
-                                        <option value="+" class="mathItem">
-                                            +
-                                        </option>
-                                        <option value="-" class="mathItem">
-                                            -
-                                        </option>
-                                        <option value="*" class="mathItem">
-                                            *
-                                        </option>
-                                        <option value="/" class="mathItem">
-                                            /
-                                        </option> 
-                                    </select>
-                                </div>
-                            </form> -->
-
-                           <!--  <div class="calcDropDownBox">
-                                <button class="calcDropDownButton">
-                                    <hr class="lineBox2">
-                                    <hr class="lineBox3">
-                                </button>
-                                <ul onclick="getOperationItem()" id="operation" class="mathItemList">
-                                    <li  value="+" class="mathItem">
-                                        +
-                                    </li>
-                                    <li value="-" class="mathItem">
-                                        -
-                                    </li>
-                                    <li value="*" class="mathItem">
-                                        *
-                                    </li>
-                                    <li value="/" class="mathItem">
-                                        /
-                                    </li>
-                                </ul>
-                            </div> -->
-                        </form>
-                        <div class="textCalc">Введите второе число:</div>
-                        <input required="Пожалуйста, введите число" class="enterBox2">
-                        <button onclick="showResult()" class="buttonBox">Вычислить</button>
+                            <div class="textCalc">Введите первое число:</div>
+                            <input type="number" required="Пожалуйста, введите число" class="enterBox1" id="enterBox1"> 
+                            <div class="textCalc">Выберите операцию:</div>
+                            
+                                <select onchange="getOperationItem()" class="enterBoxWithButton" id="operation" required>
+                                    <option class="mathItem">
+                                        
+                                    </option>
+                                    <option value="+" class="mathItem">
+                                        + Сложить
+                                    </option>
+                                    <option value="-" class="mathItem">
+                                        - Вычесть
+                                    </option>
+                                    <option value="*" class="mathItem">
+                                        * Умножить
+                                    </option>
+                                    <option value="/" class="mathItem">
+                                        / Разделить
+                                    </option> 
+                                </select>
+                            <div class="textCalc">Введите второе число:</div>
+                            <input type="number" required="Пожалуйста, введите число" class="enterBox2" id="enterBox2">
+                        </form>    
+                            <button onclick="showResult()" class="buttonBox">Вычислить</button>
+                        
                     </div>
                     <div class="calcResult">
                         <div class="textCalc">Ваш результат:</div>
@@ -244,3 +199,49 @@
     </footer>
 </body>
 </html>
+
+<!-- Старый код калькулятора <div class="enterBoxWithButton">
+                                </div>
+                                <form action="" class="calcDropDownBox">
+                                    <div class="calcDropDownButton">
+                                        <select onchange="getOperationItem()"class="mathItemList" id="operation">
+                                        
+                                            <option class="mathItem">
+                                                
+                                            </option>
+                                            <option value="+" class="mathItem">
+                                                +
+                                            </option>
+                                            <option value="-" class="mathItem">
+                                                -
+                                            </option>
+                                            <option value="*" class="mathItem">
+                                                *
+                                            </option>
+                                            <option value="/" class="mathItem">
+                                                /
+                                            </option> 
+                                        </select>
+                                    </div>
+                                </form> -->
+
+                            <!--  <div class="calcDropDownBox">
+                                    <button class="calcDropDownButton">
+                                        <hr class="lineBox2">
+                                        <hr class="lineBox3">
+                                    </button>
+                                    <ul onclick="getOperationItem()" id="operation" class="mathItemList">
+                                        <li  value="+" class="mathItem">
+                                            +
+                                        </li>
+                                        <li value="-" class="mathItem">
+                                            -
+                                        </li>
+                                        <li value="*" class="mathItem">
+                                            *
+                                        </li>
+                                        <li value="/" class="mathItem">
+                                            /
+                                        </li>
+                                    </ul>
+                                </div> -->
