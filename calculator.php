@@ -1,24 +1,49 @@
 <?php
 
-    if(!empty($_REQUEST["firstNumber"]) && !empty($_REQUEST["operation"]) && !empty($_REQUEST["secondNumber"])) {
+    $connection = mysqli_connect("localhost", "root", "", "calculator");
+    if (!$connection) {
+        die ("Связь не установлена: " . mysqli_connect_error());
+    }
+
+    $query = mysqli_query($connection, "SELECT * FROM calc_base ORDER BY id DESC LIMIT 7");
+
+    $operations = [];
+
+    while ($row = mysqli_fetch_assoc($query)){
+        
+        $operations[] = $row;
+    }
+
+    if(isset($_REQUEST["firstNumber"]) && !empty($_REQUEST["operation"]) && isset($_REQUEST["secondNumber"])) {
         $firstNumber = $_REQUEST["firstNumber"];
         $operation = $_REQUEST["operation"];
         $secondNumber = $_REQUEST["secondNumber"];
 
         if ($operation === "+") {
             $result = $firstNumber + $secondNumber;
+
+            mysqli_query($connection, "INSERT INTO calc_base (first_number, operator, second_number, result) VALUES ($firstNumber, '" . $_REQUEST["operation"] . "', $secondNumber, $result)");
         }
 
         if ($operation === "-") {
             $result = $firstNumber - $secondNumber;
+
+            mysqli_query($connection, "INSERT INTO calc_base (first_number, operator, second_number, result) VALUES ($firstNumber, '" . $_REQUEST["operation"] . "', $secondNumber, $result)");
         }
         
         if ($operation === "*") {
             $result = $firstNumber * $secondNumber;
+
+            mysqli_query($connection, "INSERT INTO calc_base (first_number, operator, second_number, result) VALUES ($firstNumber, '" . $_REQUEST["operation"] . "', $secondNumber, $result)");
         }
 
         if ($operation === "/") {
-            $result = $firstNumber / $secondNumber;
+            if ($secondNumber === "0") {
+                $result = "Ошибка! На 0 делить нельзя.";
+            } else {
+                $result = $firstNumber / $secondNumber;
+                mysqli_query($connection, "INSERT INTO calc_base (first_number, operator, second_number, result) VALUES ($firstNumber, '" . $_REQUEST["operation"] . "', $secondNumber, $result)");
+            }
         }
     }
 ?>
@@ -58,8 +83,25 @@
         <input type="number" name="secondNumber" step="0.001" required>
         <input type="submit" value="Вычислить" name="resultButton">
     </form>
-    <?php if (!empty($result)) { ?>    
-        <div>Ваш результат: <?php echo $result; ?></div>
+    <?php if (isset ($result)) { ?>    
+        <div>
+            Ваш результат: <?php echo $result; ?>
+        </div>
+    <?php } ?>
+
+    <?php if (!empty($operations)) { ?>
+        <div>
+            История операций: 
+        </div>
+
+        <?php foreach ($operations as $operation_list) { ?>
+            <div>
+                <span>-> [<?php echo $operation_list["id"]; ?>]</span> 
+                <?php echo $operation_list["first_number"] . $operation_list["operator"] . $operation_list["second_number"]; ?> 
+                <span>=</span>
+                <?php echo $operation_list["result"]; ?>
+            </div>
+        <?php } ?>
     <?php } ?>
 </body>
 </html>
