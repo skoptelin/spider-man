@@ -51,6 +51,10 @@ ul {
     display: flex;
 }
 
+.showNavList {
+    display: flex;
+}
+
 .navItem:not(:last-child) {
     margin-right: 26px;
 }
@@ -87,7 +91,6 @@ a:link {
 
     color: #FFFFFF;
 
-    /*border: 1px solid #000000;*/
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -107,6 +110,32 @@ a:visited, a:focus, a:hover, a:active {
     margin-top: -120px;
     -webkit-background-clip: content-box;
     background-clip: content-box;
+}
+
+.burger {
+    display: none;
+    width: 60px;
+    height: 38px;
+}
+
+.burgerButton {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color:#004C93;
+}
+
+.burgerLine {
+    width: 60px;
+    height: 5px;
+
+    background-color: white;
 }
 
 /* About Me */
@@ -249,6 +278,19 @@ h1 {
     padding-top: 30px;
 }
 
+.enterBox1Invalid {
+    width: 555px;
+    height: 32px;
+
+    border: 2px solid red;
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 2px;
+}
+
 .enterBox1 {
     width: 555px;
     height: 32px;
@@ -262,9 +304,18 @@ h1 {
     padding: 2px;
 }
 
-/* .enterBox1:invalid {
+.enterBox2Invalid {
+    width: 555px;
+    height: 32px;
+
     border: 2px solid red;
-  } */
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 2px;
+  }
 
 .enterBox2 {
     width: 555px;
@@ -279,9 +330,19 @@ h1 {
     padding: 2px;
 }
 
-/* .enterBox2:invalid {
+.enterBoxWithButtonInvalid {
+    width: 560px;
+    height: 36px;
+
     border: 2px solid red;
-  } */
+    /* border-right: 0; */
+
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-left: 0;
+    padding: 2px;
+}
 
 .enterBoxWithButton {
     width: 560px;
@@ -295,7 +356,7 @@ h1 {
     margin-left: 0;
     margin-left: 0;
     padding: 2px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 .buttonBox {
@@ -619,7 +680,8 @@ h1 {
 @media (max-width: 390px) {
 
     .headerBox {
-        display: block;
+        display: flex;
+        align-items: flex-start;
         margin: auto;
     }
 
@@ -627,28 +689,53 @@ h1 {
         height: auto;
     }
 
+    .showNavList {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .navList {
-        display: block;
+        display: none;
     }
 
     .navItem {
         margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .navItem:not(:last-child) {
+        margin-right: 0;
     }
 
     #aboutMe, #myActivity, #calculator, #difficult, #mood { 
-        padding-top: 250px;
-        margin-top: -250px;
+        padding-top: 150px;
+        margin-top: -150px;
         -webkit-background-clip: content-box;
         background-clip: content-box;
     }
 
     .headerTextName {
-        margin: 15px;
+        margin-top: 40px;
         margin-left: 0;
     }
 
+    .burger {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .mobileNav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        margin-top: 30px;  
+    }
+
     .aboutMeBox {
-        padding-top: 150px;
+        padding-top: 0px;
     }
 
     .myActivityList {
@@ -706,14 +793,15 @@ h1 {
     }
 
     .footerBox {
-        display: block;
+        display: flex;
+        align-items: stretch;
     }
 
     main {
-        width: 155%;
+        width: 180%;
     }
     
     .footer {
-        width: 155%;
+        width: 180%;
     }
 }

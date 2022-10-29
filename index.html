@@ -27,29 +27,38 @@
             
                 <div class="headerTextName">Стас Коптелин</div>
 
-                <nav>
-                    <ul class="navList">
-                        <li class = "navItem">
-                            <a href="#aboutMe">Обо мне</a>
-                        </li>
-                        <li class = "navItem">
-                            <a href="#myActivity">Моя деятельность</a> 
-                        </li>
-                        <li class = "navItem">
-                            <a href="#calculator">Калькулятор</a> 
-                        </li>
-                        <li class = "navItem">
-                            <a href="#difficult">Сложности</a> 
-                        </li>
-                        <li class = "navItem">
-                            <a href="#mood">Настроение</a> 
-                        </li>
-                        <li class = "navItem">
-                            <a href="#contacts">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            
+                <div class="mobileNav">
+                    <div class="burger">
+                        <button onclick="showHideNav();" class="burgerButton">
+                                <div class="burgerLine"></div>
+                                <div class="burgerLine"></div>
+                                <div class="burgerLine"></div>
+                        </button>
+                    </div>
+
+                    <nav>
+                        <ul class="showNavList navList">
+                            <li class = "navItem">
+                                <a onclick="showHideNav();" href="#aboutMe">Обо мне</a>
+                            </li>
+                            <li class = "navItem">
+                                <a onclick="showHideNav();" href="#myActivity">Моя деятельность</a> 
+                            </li>
+                            <li class = "navItem">
+                                <a onclick="showHideNav();" href="#calculator">Калькулятор</a> 
+                            </li>
+                            <li class = "navItem">
+                                <a onclick="showHideNav();" href="#difficult">Сложности</a> 
+                            </li>
+                            <li class = "navItem">
+                                <a onclick="showHideNav();" href="#mood">Настроение</a> 
+                            </li>
+                            <li class = "navItem">
+                                <a onclick="showHideNav();" href="#contacts">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
             </div>
     </header>
 
@@ -113,37 +122,35 @@
                         </div>
                     </div>
                     <div class="calcAction">
-                        <form>
-                            <div class="textCalc">Введите первое число:</div>
-                            <input type="number" required="Пожалуйста, введите число" class="enterBox1" id="enterBox1"> 
-                            <div class="textCalc">Выберите операцию:</div>
-                            
-                                <select onchange="getOperationItem()" class="enterBoxWithButton" id="operation" required>
-                                    <option class="mathItem">
-                                        
-                                    </option>
-                                    <option value="+" class="mathItem">
-                                        + Сложить
-                                    </option>
-                                    <option value="-" class="mathItem">
-                                        - Вычесть
-                                    </option>
-                                    <option value="*" class="mathItem">
-                                        * Умножить
-                                    </option>
-                                    <option value="/" class="mathItem">
-                                        / Разделить
-                                    </option> 
-                                </select>
-                            <div class="textCalc">Введите второе число:</div>
-                            <input type="number" required="Пожалуйста, введите число" class="enterBox2" id="enterBox2">
-                        </form>    
-                            <button onclick="showResult()" class="buttonBox">Вычислить</button>
-                        
+                        <div class="textCalc">Введите первое число:</div>
+                        <input type="number" onkeyup="delIncorInput()" onkeypress="maxInputElements()" required class="enterBox1Invalid enterBox1" id="enterBox1"> 
+                        <div class="textCalc">Выберите операцию:</div>
+                            <select onchange="delIncorInput(); getOperationItem()" class="enterBoxWithButtonInvalid enterBoxWithButton" id="operation" required>
+                                <option class="mathItem">
+                                    
+                                </option>
+                                <option value="+" class="mathItem">
+                                    + Сложить
+                                </option>
+                                <option value="-" class="mathItem">
+                                    - Вычесть
+                                </option>
+                                <option value="*" class="mathItem">
+                                    * Умножить
+                                </option>
+                                <option value="/" class="mathItem">
+                                    / Разделить
+                                </option> 
+                            </select>
+                        <div class="textCalc">Введите второе число:</div>
+                        <input type="number" onkeyup="delIncorInput()" onkeypress="maxInputElements()"  required class="enterBox2Invalid enterBox2" id="enterBox2">
+                        <button onclick="showResult()" class="buttonBox">Вычислить</button>
                     </div>
                     <div class="calcResult">
                         <div class="textCalc">Ваш результат:</div>
                         <div class="textCalc" id="resultText">Расчет не производился</div>
+                        <div class="textCalc">История операций:</div>
+                        <div class="textCalc" id="operationHistory">Здесь пока пусто</div>
                     </div>
                 </div>
             </div>
@@ -199,49 +206,3 @@
     </footer>
 </body>
 </html>
-
-<!-- Старый код калькулятора <div class="enterBoxWithButton">
-                                </div>
-                                <form action="" class="calcDropDownBox">
-                                    <div class="calcDropDownButton">
-                                        <select onchange="getOperationItem()"class="mathItemList" id="operation">
-                                        
-                                            <option class="mathItem">
-                                                
-                                            </option>
-                                            <option value="+" class="mathItem">
-                                                +
-                                            </option>
-                                            <option value="-" class="mathItem">
-                                                -
-                                            </option>
-                                            <option value="*" class="mathItem">
-                                                *
-                                            </option>
-                                            <option value="/" class="mathItem">
-                                                /
-                                            </option> 
-                                        </select>
-                                    </div>
-                                </form> -->
-
-                            <!--  <div class="calcDropDownBox">
-                                    <button class="calcDropDownButton">
-                                        <hr class="lineBox2">
-                                        <hr class="lineBox3">
-                                    </button>
-                                    <ul onclick="getOperationItem()" id="operation" class="mathItemList">
-                                        <li  value="+" class="mathItem">
-                                            +
-                                        </li>
-                                        <li value="-" class="mathItem">
-                                            -
-                                        </li>
-                                        <li value="*" class="mathItem">
-                                            *
-                                        </li>
-                                        <li value="/" class="mathItem">
-                                            /
-                                        </li>
-                                    </ul>
-                                </div> -->
