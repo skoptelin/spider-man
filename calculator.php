@@ -51,4 +51,7 @@
         "operationHistory" => $operations
     ];
     echo json_encode($response);
+    //для повторного залития 02.11.2022
 ?>
+
+
