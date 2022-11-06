@@ -12,7 +12,7 @@ function showResult() {
     let resultText1    = document.querySelector(".resultText");
     let resultText2    = document.getElementById("resultText");
     if ((elementInput1.value !== "") && (operationInput.value !== "") && (elementInput2.value !== "")) { //Проверка, чтобы поля ввода не были пустыми
-        calculateAjax(firstNumber, secondNumber, operation);
+        calculateAjax();
         elementWindow.classList.remove("hiddenResultBox");
     } else { //Если поля ввода пустые, просим заполнить поля и подсвечиваем их красным
         elementInput1.classList.remove("enterBox1");
@@ -138,9 +138,19 @@ function calculateAjax() {
     })
 }
 
-//для повторного залития 02.11.2022
+//Обработка ответа от сервера после отправки формы
 
-
+function calculateForm() {
+    function handleFormSubmit(event) {
+        // Просим форму не отправлять данные самостоятельно
+        event.preventDefault()
+        console.log('Отправка!')
+      }
+      
+      const applicantForm = document.getElementById('mars-once')
+      applicantForm.addEventListener('submit', handleFormSubmit)
+      
+}
 
 
 

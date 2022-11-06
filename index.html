@@ -122,29 +122,32 @@
                         </div>
                     </div>
                     <div class="calcAction">
-                        <div class="textCalc">Введите первое число:</div>
-                        <input type="number" onkeyup="delIncorInput()" onkeypress="maxInputElements()" required class="enterBox1Invalid enterBox1" id="enterBox1"> 
-                        <div class="textCalc">Выберите операцию:</div>
-                            <select onchange="delIncorInput(); getOperationItem()" class="enterBoxWithButtonInvalid enterBoxWithButton" id="operation" required>
-                                <option class="mathItem">
-                                    
-                                </option>
-                                <option value="+" class="mathItem">
-                                    + Сложить
-                                </option>
-                                <option value="-" class="mathItem">
-                                    - Вычесть
-                                </option>
-                                <option value="*" class="mathItem">
-                                    * Умножить
-                                </option>
-                                <option value="/" class="mathItem">
-                                    / Разделить
-                                </option> 
-                            </select>
-                        <div class="textCalc">Введите второе число:</div>
-                        <input type="number" onkeyup="delIncorInput()" onkeypress="maxInputElements()"  required class="enterBox2Invalid enterBox2" id="enterBox2">
-                        <button onclick="showResult()" class="buttonBox">Вычислить</button>
+                        <!-- <form action="calculator.php" method="post" id="calculatorForm"> -->
+                            <div class="textCalc">Введите первое число:</div>
+                            <input type="number" onkeyup="delIncorInput()" onkeypress="maxInputElements()" required class="enterBox1Invalid enterBox1" id="enterBox1" name="firstNumber"> 
+                            <div class="textCalc">Выберите операцию:</div>
+                                <select onchange="delIncorInput(); getOperationItem()" class="enterBoxWithButtonInvalid enterBoxWithButton" id="operation" required name="operation">
+                                    <option class="mathItem">
+                                        
+                                    </option>
+                                    <option value="+" class="mathItem">
+                                        + Сложить
+                                    </option>
+                                    <option value="-" class="mathItem">
+                                        - Вычесть
+                                    </option>
+                                    <option value="*" class="mathItem">
+                                        * Умножить
+                                    </option>
+                                    <option value="/" class="mathItem">
+                                        / Разделить
+                                    </option> 
+                                </select>
+                            <div class="textCalc">Введите второе число:</div>
+                            <input type="number" onkeyup="delIncorInput()" onkeypress="maxInputElements()"  required class="enterBox2Invalid enterBox2" id="enterBox2" name="secondNumber">
+                            <!-- <input onclick="showResult()" class="buttonBox" type="submit" value="Вычислить"/> -->
+                            <button onclick="showResult()" class="buttonBox">Вычислить</button>  <!-- Кнопка для отправки данных калькулятора через js -->
+                        <!-- </form> -->
                     </div>
                     <div class="calcResult">
                         <div class="textCalc">Ваш результат:</div>
@@ -206,5 +209,3 @@
     </footer>
 </body>
 </html>
-
-<!-- для повторного залития 02.11.2022 -->
