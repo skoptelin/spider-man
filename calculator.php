@@ -11,4 +11,4 @@
 
     $operations = $load->loadCalcOperation();
 
-    $respose->respose($result, $operations);
+    $respose->resposeNew($result, $operations);

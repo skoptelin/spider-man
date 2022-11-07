@@ -1,7 +1,7 @@
 <?php
     //Ответ сервера в формате JSON
     class respose {
-        function respose($result, $operations){
+        function resposeNew($result, $operations){
             $response = [
                 "result" => $result,
                 "operationHistory" => $operations
