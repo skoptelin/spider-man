@@ -117,9 +117,7 @@ function calculateAjax() {
     let resultText1 = document.querySelector(".resultText");
     let resultText2 = document.getElementById("resultText");
 
-    if(operation === "+"){
-        operation = "%2B";
-    }
+    operation = encodeURIComponent(operation);
 
     fetch("calculator.php?firstNumber=" + firstConvertedNumber + "&operation=" + operation + "&secondNumber=" + secondConvertedNumber)
     .then(respose => respose.json())
