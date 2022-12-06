@@ -1,3 +1,5 @@
+
+// Создание html разметки калькулятора через js
 function createCalc() {
     let sectionActivity = document.querySelector(".myActivityBox");
 
@@ -248,7 +250,7 @@ function showHideNav() {
     showBurgerMenu.classList.toggle("navList");
 }
 
-// Ограниение ввода символов в инпутах калькулятора
+// Ограничение ввода символов в инпутах калькулятора
 function maxInputElements() {
     let elementInput1 = document.querySelector("#enterBox1");
     let elementInput2 = document.querySelector("#enterBox2");
@@ -326,21 +328,4 @@ function calculateAjax() {
         document.getElementById("operationHistory").innerHTML = operationHistory;
     })
 }
-
-//Обработка ответа от сервера после отправки формы
-
-function calculateForm() {
-    function handleFormSubmit(event) {
-        // Просим форму не отправлять данные самостоятельно
-        event.preventDefault()
-        console.log('Отправка!')
-      }
-      
-      const applicantForm = document.getElementById('mars-once')
-      applicantForm.addEventListener('submit', handleFormSubmit)
-      
-}
-
-
-
 
